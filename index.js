@@ -3,8 +3,9 @@
 
 require('shelljs/global');
 var info = require('git-repo-info')();
+var revisionComment;
 
-revisionCommen = function() {
+revisionComment = function() {
 	return '<!--\n' + info.sha + '\n-->';
 }
 
@@ -16,6 +17,6 @@ module.exports = {
       return;
     }
 
-    return revisionCommen();
+    return revisionComment();
   }
 };
